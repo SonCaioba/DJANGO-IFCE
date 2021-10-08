@@ -1,0 +1,24 @@
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert {{ message.tags }} sucesso" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <i class="material-icons">check</i>
+            </button>
+        </div>
+
+        <style>
+        	.sucesso {
+        		color:darkgreen;
+        		background-color: lightgreen;
+        		padding:10px;
+        		text-align:center;
+        		border-radius: 25px;
+        		margin-top:15px;
+        	}
+        	.check {
+        		font-size:5px !important;
+        	}
+        </style>
+    {% endfor %}
+{% endif %}
